@@ -253,6 +253,43 @@ body { background: #f5f8fc; color: #142d43; }
 .site-shell .module-green .module-watermark { color: #0B682209; }
 @media (max-width: 1150px) { .site-shell .ecosystem-top { margin-inline: -18px; padding-inline: 18px; } }
 
+/* Warm ivory, violet and copper palette for daytime mode. */
+html:not(.dark) { --day-ink: #30283f; --day-muted: #716778; --day-primary: #6d48a0; --day-hover: #583783; --day-accent: #9a532d; --day-border: #e4dce9; --day-soft: #f0eaf7; --day-warm: #f7e9dd; }
+html:not(.dark) body, html:not(.dark) .site-shell { background: #faf8f5; color: var(--day-ink); }
+html:not(.dark) :is(.site-header, .site-shell .hero) { background: #faf8f5; border-color: var(--day-border); }
+html:not(.dark) .module-page { background: radial-gradient(ellipse at 20% 45%, #f0eaf7, transparent 60%), radial-gradient(ellipse at 85% 65%, #f7e9dd, #faf8f5 65%); color: var(--day-ink); }
+html:not(.dark) :is(.brand, .site-shell .hero h1, .site-shell .ecosystem-heading h2, .site-shell .tool-card h3, .site-shell .bottom-banner h2) { color: var(--day-ink); }
+html:not(.dark) :is(.sport-word, .site-shell .hero h1 span, .site-shell .hero-note, .site-shell .mini-stars, .site-shell .section-kicker, .site-shell .ecosystem-heading > span, .module-placeholder p) { color: var(--day-accent); }
+html:not(.dark) :is(.brand-ai, .site-shell .step-number, .site-shell .bottom-banner .orbit-label) { background: var(--day-warm); border-color: #ead2bf; color: var(--day-accent); }
+html:not(.dark) :is(.desktop-nav a, .site-shell .ecosystem-metrics strong, .site-shell .card-link) { color: var(--day-primary); }
+html:not(.dark) :is(.header-cta, .site-shell .banner-button, .site-shell .prompt-bottom button) { background: var(--day-primary); border-color: var(--day-primary); color: #fff; }
+html:not(.dark) :is(.header-cta:hover, .site-shell .banner-button:hover, .site-shell .prompt-bottom button:hover) { background: var(--day-hover); }
+html:not(.dark) :is(.brand-mark, .site-shell .map-core, .site-shell .orbit-core, .site-shell .ecosystem-top) { background: linear-gradient(135deg, #63418e, #9671b4); color: #fff; border-color: #bba3d0; }
+html:not(.dark) :is(.language-picker, .mobile-nav, .site-shell .prompt-box, .site-shell .suggestions button, .site-shell .map-node, .site-shell .tool-card, .site-shell .steps-grid article) { background: #fffdfb; color: var(--day-ink); border-color: var(--day-border); }
+html:not(.dark) :is(.theme-toggle, .site-shell .eyebrow, .site-shell .tool-count, .site-shell .card-corner, .site-shell .demo-notice, .tool-icon.blue) { background: var(--day-soft); color: var(--day-primary); border-color: var(--day-border); }
+html:not(.dark) :is(.theme-toggle:hover, .site-shell .suggestions button:hover, .site-shell .map-node:hover) { background: #e8ddf2; border-color: #bba3d0; }
+html:not(.dark) :is(.site-shell .ecosystem-panel, .site-shell .bottom-banner) { background: #f2edf6; border-color: var(--day-border); color: var(--day-ink); }
+html:not(.dark) .site-shell .ecosystem-footer { background: #e9e0f0; color: var(--day-primary); border-color: var(--day-border); }
+html:not(.dark) :is(.site-shell .hero-description, .site-shell .section-heading p, .site-shell .center-heading p, .site-shell .steps-grid p, .site-shell .bottom-banner p, .site-shell .site-footer p, .site-shell .site-footer > span, .site-shell .ecosystem-metrics div > span, .site-shell .tool-card p.module-status, .site-shell .prompt-bottom > span, .site-shell .suggestions) { color: var(--day-muted); }
+html:not(.dark) .site-shell .prompt-box textarea { color: var(--day-ink); }
+html:not(.dark) .site-shell .prompt-box textarea::placeholder { color: var(--day-muted); }
+html:not(.dark) .site-shell .prompt-box:focus-within { border-color: var(--day-primary); box-shadow: 0 0 0 3px #6d48a015; }
+html:not(.dark) :is(.site-shell .map-ring, .site-shell .ring-inner, .site-shell .ecosystem-metrics, .site-shell .card-link, .site-shell .bottom-banner .orbit) { border-color: var(--day-border); }
+html:not(.dark) .site-shell .hero-grid { background-image: linear-gradient(#ddd0e8 1px, transparent 1px), linear-gradient(90deg, #ddd0e8 1px, transparent 1px); }
+html:not(.dark) .site-shell .axis-horizontal { background: linear-gradient(90deg, transparent, #baa1d0, transparent); }
+html:not(.dark) .site-shell .axis-vertical { background: linear-gradient(transparent, #baa1d0, transparent); }
+html:not(.dark) .site-shell .tool-card::before { background: var(--day-primary); }
+html:not(.dark) :is(.site-shell .module-green::before, .site-shell .status-dot) { background: var(--day-accent); }
+html:not(.dark) .site-shell .tool-card:hover { border-color: #b69bc9; box-shadow: 0 8px 24px #63418e10; }
+html:not(.dark) .site-shell .tool-card .tool-icon.blue { background: var(--day-soft); color: var(--day-primary); border-color: var(--day-border); }
+html:not(.dark) :is(.tool-icon.green, .site-shell .tool-card .tool-icon.green) { background: var(--day-warm); color: var(--day-accent); border-color: #ead2bf; }
+html:not(.dark) :is(.site-shell .module-green .card-link, .site-shell .map-node > .iconify, .site-shell .ecosystem-metrics > .iconify) { color: var(--day-accent); }
+html:not(.dark) .site-shell .ecosystem-metrics strong span { color: #a38ab5; }
+html:not(.dark) .site-shell .module-watermark { color: #6d48a009; }
+html:not(.dark) .site-shell .module-green .module-watermark { color: #9a532d09; }
+html:not(.dark) .site-shell .bottom-banner .orbit-dot { background: var(--day-accent); border-color: #f2edf6; }
+html:not(.dark) :is(.site-shell, .module-page) :is(button, a, textarea, select):focus-visible { outline-color: var(--day-primary); }
+
 /* Shared light/dark mode, powered by Nuxt color mode. */
 .theme-toggle { display: inline-grid; place-items: center; flex-shrink: 0; width: 36px; height: 36px; border: 1px solid #cce2f6; border-radius: 10px; background: #e4f4fe; color: #0d3e8a; font-size: 19px; }
 .theme-toggle:hover { background: #cce2f6; }

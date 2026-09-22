@@ -4,7 +4,7 @@ export const sportModules = [
     icon: 'i-lucide-database',
     color: 'blue',
     title: {
-      uz: 'Ma`lumotlarni yig‘ish',
+      uz: 'Ma\'lumotlarni yig\'ish',
       ru: '???? ??????',
       en: 'Data collection'
     }
@@ -14,13 +14,13 @@ export const sportModules = [
     icon: 'i-lucide-list-filter',
     color: 'green',
     title: {
-      uz: 'Ma`lumotlarni standartlashtirish',
+      uz: 'Ma\'lumotlarni standartlashtirish',
       ru: '?????????????? ??????',
       en: 'Data standardisation'
     }
   },
   {
-    slug: 'athlete-profile',
+    slug: 'athlete-analysis',
     icon: 'i-lucide-user-round',
     color: 'blue',
     title: {
@@ -30,7 +30,7 @@ export const sportModules = [
     }
   },
   {
-    slug: 'coach-profile',
+    slug: 'coach-analysis',
     icon: 'i-lucide-contact-round',
     color: 'green',
     title: {
@@ -50,11 +50,11 @@ export const sportModules = [
     }
   },
   {
-    slug: 'change-analysis',
+    slug: 'changes-analysis',
     icon: 'i-lucide-chart-no-axes-combined',
     color: 'green',
     title: {
-      uz: 'O`zgarishlar tahlili',
+      uz: 'O\'zgarishlar tahlili',
       ru: '?????? ?????????',
       en: 'Change analysis'
     }
@@ -70,7 +70,7 @@ export const sportModules = [
     }
   },
   {
-    slug: 'forecast',
+    slug: 'prediction',
     icon: 'i-lucide-trending-up',
     color: 'green',
     title: {
@@ -110,23 +110,13 @@ export const sportModules = [
     }
   },
   {
-    slug: 'explanation',
+    slug: 'ai-explanation',
     icon: 'i-lucide-message-square-text',
     color: 'green',
     title: {
-      uz: 'Izohlash',
+      uz: 'Izohlash SI',
       ru: '??????????',
       en: 'Explanation'
-    }
-  },
-  {
-    slug: 'ai-anti-spoofing',
-    icon: 'i-lucide-scan-face',
-    color: 'blue',
-    title: {
-      uz: 'AI anti-spoofing',
-      ru: 'AI ???????????',
-      en: 'AI anti-spoofing'
     }
   },
   {
@@ -146,18 +136,18 @@ export const moduleCopy = {
     soon: 'Tez kunda',
     open: 'Sahifaga o‘tish',
     back: 'Bosh sahifaga qaytish',
-    count: '14 ta yo?nalish'
+    count: '13 ta yo‘nalish'
   },
   ru: {
     soon: '?????',
     open: '??????? ????????',
     back: '?? ???????',
-    count: '14 ???????????'
+    count: '13 ???????????'
   },
   en: {
     soon: 'Coming soon',
     open: 'Open page',
     back: 'Back to home',
-    count: '14 focus areas'
+    count: '13 focus areas'
   }
 }

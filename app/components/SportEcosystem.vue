@@ -54,7 +54,7 @@ const copy = computed(() => ({
       ><UIcon name="i-lucide-sparkles" />{{ copy.result }}</NuxtLink>
     </div>
     <div class="ecosystem-metrics">
-      <div><strong>14<span> / </span></strong><span>{{ copy.modules }}</span></div><div><strong>03<span> / </span></strong><span>{{ copy.languages }}</span></div><UIcon name="i-lucide-activity" />
+      <div><strong>13<span> / </span></strong><span>{{ copy.modules }}</span></div><div><strong>03<span> / </span></strong><span>{{ copy.languages }}</span></div><UIcon name="i-lucide-activity" />
     </div>
     <div class="ecosystem-footer">
       <UIcon name="i-lucide-workflow" />{{ copy.footer }}

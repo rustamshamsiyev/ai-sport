@@ -1,3 +1,8 @@
+<script setup lang="ts">
+definePageMeta({ layout: false })
+await navigateTo('/digital-control', { redirectCode: 301, replace: true })
+</script>
+
 <template>
-  <SportModulePlaceholder slug="digital-control" />
+  <span />
 </template>

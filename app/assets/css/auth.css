@@ -1,0 +1,21 @@
+.auth-screen { display:grid; place-items:center; padding:24px; }
+.auth-card { padding:30px; width:100%; min-width:0; }
+.auth-screen .auth-card { max-width:440px; }
+.auth-heading { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
+.auth-eyebrow { color:var(--erp-blue); font-size:11px; font-weight:700; letter-spacing:2px; margin-bottom:12px; }
+.auth-card h1 { font-size:26px; font-weight:700; }
+.auth-card h2 { font-size:18px; font-weight:600; }
+.auth-muted { color:var(--erp-muted); margin-top:10px; font-size:13px; line-height:1.6; }
+.auth-form { display:grid; gap:18px; margin-top:24px; }
+.auth-field { display:grid; gap:8px; font-size:13px; font-weight:500; }
+.auth-field input { width:100%; min-width:0; border:1px solid var(--erp-border); border-radius:8px; padding:11px 12px; background:var(--erp-bg); color:var(--erp-text); font:inherit; }
+.auth-field input:focus-visible,.auth-button:focus-visible,.auth-link:focus-visible { outline:2px solid var(--erp-blue); outline-offset:3px; }
+.auth-button { border:0; border-radius:8px; background:#275fc2; color:white; padding:12px 16px; font:inherit; font-weight:600; cursor:pointer; }
+.auth-button:disabled { opacity:.5; cursor:not-allowed; }
+.auth-link { background:transparent; border:0; color:var(--erp-blue); font-size:13px; cursor:pointer; }
+.auth-error { border-radius:7px; padding:10px 12px; background:color-mix(in srgb,#d34444 10%,var(--erp-surface)); color:light-dark(#a52030,#ffa5ae); font-size:13px; }
+.auth-success { color:light-dark(#16805d,#89d9b3); font-size:13px; }
+.auth-profile-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; gap:24px; }
+.auth-user-menu { display:flex; align-items:center; gap:10px; border:0; padding:4px; border-radius:8px; background:transparent; color:var(--erp-text); text-align:left; cursor:pointer; }
+.auth-user-menu:focus-visible { outline:2px solid var(--erp-blue); outline-offset:3px; }
+@media(max-width:760px) { .auth-profile-grid { grid-template-columns:1fr; }.auth-card { padding:22px; } }

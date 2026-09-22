@@ -1,3 +1,8 @@
+<script setup lang="ts">
+definePageMeta({ layout: false })
+await navigateTo('/data-standardization', { redirectCode: 301, replace: true })
+</script>
+
 <template>
-  <SportModulePlaceholder slug="data-standardization" />
+  <span />
 </template>

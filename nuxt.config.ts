@@ -10,6 +10,12 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: '',
+      useMockApi: false
+    }
+  },
 
   routeRules: {
     '/': { prerender: true }
