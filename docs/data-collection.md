@@ -1,5 +1,10 @@
 ﻿# Data collection — FastAPI integration
 
+Statistics v1 adds a lazy **Statistika** view with real global totals, AI counts,
+schema statistics and server-filtered/paginated objects. Database drafts remain
+mounted when switching views. See [Statistics verification](./data-collection-statistics.md)
+for the contract, 80-test results and real backend/browser verification.
+
 Full real-backend and Chrome UI verification (2026-09-19), including Save/restore,
 scan, error injection and the schema Cancel fix:
 [Frontend verification report](./data-collection-verification.md).

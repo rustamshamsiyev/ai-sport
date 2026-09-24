@@ -1,4 +1,6 @@
 import type { DatabaseColumn, DatabaseObject, DatabaseSchema, DatabaseService, DataSource, MockScenario, ScanResult, SemanticPatch } from '../types/database.ts'
+import { mapStatistics, mockStatistics, statisticsQuery } from './statisticsAdapter.ts'
+import type { StatisticsDto } from './statisticsAdapter.ts'
 
 // DTOs follow the FastAPI OpenAPI contract; only these adapters know snake_case.
 interface SemanticDto { business_name: string | null, description: string | null, ai_enabled: boolean }
@@ -83,6 +85,7 @@ export function createDatabaseService(options: ServiceOptions = {}): DatabaseSer
     return mapTable(dto, schema.name)
   }
   return {
+    getStatistics: async params => mapStatistics(await request<StatisticsDto>(`statistics?${statisticsQuery(params)}`)),
     updateTable: async (id, payload) => table(await request<TableDto>(`tables/${encodeURIComponent(id)}`, 'PATCH', mapSemanticPatch(payload))),
     updateColumn: async (id, payload) => mapColumn(await request<ColumnDto>(`columns/${encodeURIComponent(id)}`, 'PATCH', mapSemanticPatch(payload))),
     getSource: async () => mapSource(await request<SourceDto>('source')),
@@ -120,6 +123,7 @@ function createMockAdapter(options: ServiceOptions): DatabaseService {
     }
   }
   return {
+    getStatistics: async params => mockStatistics(await load(), params),
     async updateTable(id, payload) {
       const patch = mockPatch(payload)
       return (await mock).save({ ...await find(id), ...patch })

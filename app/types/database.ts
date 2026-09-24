@@ -87,6 +87,7 @@ export interface ScanResult {
 }
 
 export interface DatabaseService {
+  getStatistics: (params?: import('./statistics.ts').StatisticsParams) => Promise<import('./statistics.ts').DatabaseStatistics>
   updateTable: (tableId: string, payload: SemanticPatch) => Promise<DatabaseObject>
   updateColumn: (columnId: string, payload: SemanticPatch) => Promise<DatabaseColumn>
   getSource: () => Promise<DataSource>

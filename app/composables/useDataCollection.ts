@@ -13,7 +13,8 @@ export function useDataCollection(scenario: MockScenario = 'normal') {
     resolveConfirmation?.(accepted)
     resolveConfirmation = undefined
   }
-  const state = createDataCollectionState(createDatabaseService({ baseUrl: config.public.apiBaseUrl, useMockApi: mockMode, scenario, fetcher: auth.fetcher }), () => new Promise<boolean>((resolve) => {
+  const service = createDatabaseService({ baseUrl: config.public.apiBaseUrl, useMockApi: mockMode, scenario, fetcher: auth.fetcher })
+  const state = createDataCollectionState(service, () => new Promise<boolean>((resolve) => {
     resolveConfirmation = resolve
     confirmOpen.value = true
   }), auth.hasPermission)
@@ -37,5 +38,5 @@ export function useDataCollection(scenario: MockScenario = 'normal') {
     finishConfirmation(false)
     window.removeEventListener('beforeunload', beforeUnload)
   })
-  return { ...state, mockMode, confirmOpen, finishConfirmation, hasPermission: auth.hasPermission }
+  return { ...state, service, mockMode, confirmOpen, finishConfirmation, hasPermission: auth.hasPermission }
 }
